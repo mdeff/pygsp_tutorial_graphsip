@@ -14,6 +14,31 @@ computer, or work in the cloud using [binder][binder_lab].
 [binder_lab]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorials_graphsip/master?urlpath=lab
 [binder_notebook]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorials_graphsip/master?urlpath=tree
 
+## Content
+
+The material covers the following topics:
+* representation of graphs and signals
+* some standard graph models (e.g. Erdos-Renyi, Barabasi-Albert)
+* graph construction (e.g. from point clouds)
+* graph operators: Laplacian and difference
+* smoothness of graph signals
+* graph Fourier basis: eigenvectors and spectrum
+* applications: spectral clustering, Laplacian eigenmap
+* graph Fourier transform
+* filtering by convolution in Fourier
+* some standard filters & filterbanks
+* fast filtering with polynomial approximations
+* application: denoising with low-pass filtering as the solution to an optimization problem (maybe EEG / fMRI data), curvature estimation with wavelets (point cloud / shape)
+* convex optimization on graph
+* application: semi-supervized learning with Thikonov / TV prior
+
+Optional / advanced:
+* deep learning on graphs, i.e. learning graph filters
+  * application: semantic segmentation of point clouds
+* spectrum estimation by filtering random signals
+  * application: spectral clustering, Laplacian eigenmap
+* stationarity
+
 ## Installation
 
 Click the [binder badge][binder_lab] to play with the notebooks from your
