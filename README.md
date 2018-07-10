@@ -3,3 +3,7 @@ Presented at the [graphSIP] summer school by [Michaël Defferrard](http://deff.c
 
 [pygsp]: https://github.com/epfl-lts2/pygsp
 [graphsip]: https://graphsip.sciencesconf.org
+
+## License
+
+The content is released under the terms of the [MIT License](LICENSE.txt).
