@@ -17,6 +17,23 @@ computer.
 ## Content
 
 The material covers the following topics:
+1. [Graphs: creation, models, properties, visualization][graphs]
+1. [Spectral Graph Theory: spectral clustering, Laplacian eigenmaps][spectral]
+1. [Graph signals: gradient, divergence, smoothness][signals]
+1. [Fourier: modes, transform][fourier]
+1. [Filters: filterbanks, filtering, approximations][filters]
+1. [Applications to point clouds: denoising and curvature estimation][point_clouds]
+1. [Applications to neuroscience: fMRI signals on brain connectome][neuroscience]
+
+[graphs]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/01_graphs.ipynb
+[spectral]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/02_spectral.ipynb
+[signals]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/03_signals.ipynb
+[fourier]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/04_fourier.ipynb
+[filters]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/05_filters.ipynb
+[point_clouds]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/06_point_clouds.ipynb
+[neuroscience]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/07_neuroscience.ipynb
+
+Notes:
 * representation of graphs and signals
 * some standard graph models (e.g. Erdos-Renyi, Barabasi-Albert)
 * graph construction (e.g. from point clouds)
