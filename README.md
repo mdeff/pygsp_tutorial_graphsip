@@ -54,7 +54,7 @@ to install it and create an environment for the course.
 1. Open a terminal. Windows: open the Anaconda Prompt from the Start menu.
 1. Install git with `conda install git`.
 1. Download this repository by running
-   `git clone https://github.com/mdeff/pygsp_tutorial_graphsip`.
+   `git clone https://github.com/mdeff/pygsp_tutorial_graphsip` or by pressing the green "Clone or download" button on the top of this page.
 1. Create an environment with `conda create --name pygsp_tutorial_graphsip`. 
    (you can also do this by launching Anaconda Navigator --> Environments --> Create)
 1. Activate the environment with `conda activate pygsp_tutorial_graphsip`
