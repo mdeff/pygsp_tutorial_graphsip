@@ -59,7 +59,7 @@ to install it and create an environment for the course.
    (you can also do this by launching Anaconda Navigator --> Environments --> Create)
 1. Activate the environment with `conda activate pygsp_tutorial_graphsip`
    (or `activate pygsp_tutorial_graphsip`, or `source activate pygsp_tutorial_graphsip`).
-1. Within this environment, run `conda install Jupyter numpy scipy matplotlib` and `pip install pygsp`.
+1. Within this environment, run `conda install Jupyter numpy scipy matplotlib pandas networkx` and `pip install pygsp`.
 
 Every time you want to work, do the following:
 
