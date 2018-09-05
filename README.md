@@ -1,4 +1,4 @@
-# Graph signal processing tutorials using the [pyGSP]
+# Graph Signal Processing tutorial using the [PyGSP]
 
 [![Binder](https://mybinder.org/badge.svg)][binder_lab]
 &nbsp; (Jupyter [lab][binder_lab] or [notebook][binder_notebook])
@@ -10,6 +10,9 @@ Presented at the [graphSIP] summer school by [Michaël Defferrard](http://deff.c
 
 We suggest you follow the [installation guide](#installation) to setup your own
 computer.
+
+[binder_lab]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorial_graphsip/master?urlpath=lab
+[binder_notebook]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorial_graphsip/master?urlpath=tree
 
 ## Content
 
@@ -38,7 +41,7 @@ Optional / advanced:
 
 ## Installation
 
-For a local installation, you will need [git], [Jupyter], and packages from the
+For a local installation, you will need [git], [Python >= 3.6][python], [Jupyter], and packages from the
 [Python scientific stack][scipy]. If you don't know how to install those on
 your platform, we recommend to install [Miniconda], a distribution of the
 [conda] package and environment manager. Please follow the below instructions
@@ -55,11 +58,11 @@ to install it and create an environment for the course.
 1. Install git with `conda install git`.
 1. Download this repository by running
    `git clone https://github.com/mdeff/pygsp_tutorial_graphsip` or by pressing the green "Clone or download" button on the top of this page.
-1. Create an environment with `conda create --name pygsp_tutorial_graphsip`. 
+1. Create an environment with `conda create --name pygsp_tutorial_graphsip`.
    (you can also do this by launching Anaconda Navigator --> Environments --> Create)
 1. Activate the environment with `conda activate pygsp_tutorial_graphsip`
    (or `activate pygsp_tutorial_graphsip`, or `source activate pygsp_tutorial_graphsip`).
-1. Within this environment, run `conda install Jupyter numpy scipy matplotlib pandas networkx` and `pip install pygsp`.
+1. Within this environment, run `conda install jupyter numpy scipy matplotlib pandas networkx` and `pip install pygsp`.
 
 Every time you want to work, do the following:
 
@@ -70,10 +73,11 @@ Every time you want to work, do the following:
    open a new tab in your web browser.
 1. Edit and run the notebooks from your browser.
 
-You can try to run the Jupyter notebook 'mini_test.ipynb' to make sure that the main toolboxes are at least callable. 
+You can try to run the Jupyter notebook `mini_test.ipynb` to make sure that the main toolboxes are at least callable.
 
 [git]: https://git-scm.com
-[Jupyter]: https://jupyter.org/
+[python]: https://www.python.org
+[jupyter]: https://jupyter.org/
 [scipy]: https://www.scipy.org
 [anaconda]: https://anaconda.org
 [miniconda]: https://conda.io/miniconda.html
