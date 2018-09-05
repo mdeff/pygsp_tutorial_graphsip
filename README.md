@@ -8,11 +8,8 @@ Presented at the [graphSIP] summer school by [Michaël Defferrard](http://deff.c
 [pygsp]: https://github.com/epfl-lts2/pygsp
 [graphsip]: https://graphsip.sciencesconf.org
 
-You can either follow the [installation guide](#installation) to setup your own
-computer, or work in the cloud using [binder][binder_lab].
-
-[binder_lab]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorials_graphsip/master?urlpath=lab
-[binder_notebook]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorials_graphsip/master?urlpath=tree
+We suggest you follow the [installation guide](#installation) to setup your own
+computer.
 
 ## Content
 
@@ -41,10 +38,7 @@ Optional / advanced:
 
 ## Installation
 
-Click the [binder badge][binder_lab] to play with the notebooks from your
-browser without installing anything.
-
-For a local installation, you will need [git], [Python], and packages from the
+For a local installation, you will need [git], [Jupyter], and packages from the
 [Python scientific stack][scipy]. If you don't know how to install those on
 your platform, we recommend to install [Miniconda], a distribution of the
 [conda] package and environment manager. Please follow the below instructions
@@ -61,8 +55,10 @@ to install it and create an environment for the course.
 1. Install git with `conda install git`.
 1. Download this repository by running
    `git clone https://github.com/mdeff/pygsp_tutorials_graphsip`.
-1. Create an environment with the packages required for the course with
-   `conda env create -f pygsp_tutorials_graphsip/environment.yml`.
+1. Create an environment with `conda create pygsp_tutorials_graphsip`. 
+   (you can also do this by launching Anaconda Navigator --> Environments --> Create)
+1. Within this environment, install Jupyter and the necessary toolboxes: at least 
+   numpy, scipy, matplotlib and pygsp. 
 
 Every time you want to work, do the following:
 
@@ -73,8 +69,11 @@ Every time you want to work, do the following:
    open a new tab in your web browser.
 1. Edit and run the notebooks from your browser.
 
+You can try to run the Jupyter notebook 'mini_test.ipynb' to make sure that the main 
+4 toolboxes are at least callable. 
+
 [git]: https://git-scm.com
-[python]: https://www.python.org
+[Jupyter]: https://jupyter.org/
 [scipy]: https://www.scipy.org
 [anaconda]: https://anaconda.org
 [miniconda]: https://conda.io/miniconda.html
