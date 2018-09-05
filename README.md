@@ -70,8 +70,7 @@ Every time you want to work, do the following:
    open a new tab in your web browser.
 1. Edit and run the notebooks from your browser.
 
-You can try to run the Jupyter notebook 'mini_test.ipynb' to make sure that the main 
-4 toolboxes are at least callable. 
+You can try to run the Jupyter notebook 'mini_test.ipynb' to make sure that the main toolboxes are at least callable. 
 
 [git]: https://git-scm.com
 [Jupyter]: https://jupyter.org/
