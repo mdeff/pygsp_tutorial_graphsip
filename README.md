@@ -55,7 +55,7 @@ to install it and create an environment for the course.
 1. Install git with `conda install git`.
 1. Download this repository by running
    `git clone https://github.com/mdeff/pygsp_tutorial_graphsip`.
-1. Create an environment with `conda create pygsp_tutorial_graphsip`. 
+1. Create an environment with `conda create --name pygsp_tutorial_graphsip`. 
    (you can also do this by launching Anaconda Navigator --> Environments --> Create)
 1. Within this environment, run `pip install -r requirements.txt` to install the required
    packages (at least Jupyter and the toolboxes numpy, scipy, matplotlib and pygsp). 
