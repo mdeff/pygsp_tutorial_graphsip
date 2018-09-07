@@ -33,6 +33,16 @@ The material covers the following topics:
 [point_clouds]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/06_point_clouds.ipynb
 [neuroscience]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/07_neuroscience.ipynb
 
+The content is inspired by the following resources.
+
+* A [tutorial][ntds_tutorial] and an [assignment][ntds_assignment] from the course [A Network Tour of Data Science][ntds] taught at EPFL.
+* The [tutorials from the PyGSP documentation][pygsp_tutorials].
+
+[ntds]: https://github.com/mdeff/ntds_2017
+[ntds_tutorial]: https://nbviewer.jupyter.org/github/mdeff/ntds_2017/blob/outputs/demos/08_pygsp.ipynb
+[ntds_assignment]: https://nbviewer.jupyter.org/github/mdeff/ntds_2017/blob/outputs/assignments/04_solution.ipynb
+[pygsp_tutorials]: https://pygsp.readthedocs.io/en/stable/tutorials
+
 Notes:
 * representation of graphs and signals
 * some standard graph models (e.g. Erdos-Renyi, Barabasi-Albert)
