@@ -22,6 +22,9 @@
 import numpy as np
 from scipy import sparse
 import random
+import collections 
+from scipy import special 
+
 
 def ind2sub4up(IND):
     ##IND2SUB4UP Subscripts from linear index for upper triangular matrix (only
@@ -113,6 +116,7 @@ def AR_index(c1,c2):
     perf = AR_index(c1,c2)
     where c1 and c2 are two different community structures (vectors of same size) to be compared
     the index varies between -1 and 1 (1 is perfect match, -1 is perfect anti-match, 0 is expected if one of them is random)
+    c1 and c2 must be vectors of integers
     """
     c1 = c1 - np.min(c1)
     c2 = c2 - np.min(c2)
