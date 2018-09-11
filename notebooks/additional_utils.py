@@ -166,13 +166,31 @@ def AR_index(c1,c2):
 
     return res
 
-def generate_concentric_circles(N_in, N_out, sigma_in, sigma_out):
+def generate_concentric_circles(N_in, N_out, sigma_in, sigma_out, d=2):
+    '''
+    Create a simple data set made of two concentric distributions
+    data, truth = generate_concentric_circles(N_in, N_out, sigma_in, sigma_out)
+    '''
+    data = np.empty((N_in+N_out,d)) * np.nan
+    # first cluster
+    x = 2*np.random.rand(N_out, d)-1
+    x_sum = np.sqrt(np.sum(x**2,1))
+    for dd in np.arange(d):
+        data[:N_out,dd] = x[:,dd] / x_sum + sigma_out * np.random.randn(1,N_out)
+
+    # second cluster
+    data[N_out:, :] = sigma_in * np.random.randn(N_in, d)
+
+    truth = np.zeros((N_in+N_out,))
+    truth[N_out:]=1
+    return data, truth
+
+def generate_concentric_circles_old(N_in, N_out, sigma_in, sigma_out):
     '''
     Create a simple data set made of two concentric distributions
     data, truth = generate_concentric_circles(N_in, N_out, sigma_in, sigma_out)
     '''
     data = np.empty((N_in+N_out,2)) * np.nan
-    # first cluster
     x = 2*np.random.rand(1,N_out)-1;
     y = 2*np.random.rand(1,N_out)-1;
     data[:N_out,0] = x / np.sqrt(x**2 + y**2) + sigma_out * np.random.randn(1,N_out)
