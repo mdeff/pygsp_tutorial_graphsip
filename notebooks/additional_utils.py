@@ -1,23 +1,4 @@
-# Copyright (C) 2018 Nicolas Tremblay.
-# This file is part of the DPP4Coreset (Determinantal Point Processes for Coresets) toolbox
-#
-# The DPP4Coreset toolbox is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# The DPP4Coreset toolbox is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-# If you use this toolbox please kindly cite
-#     N. Tremblay, S. Barthelmé, Pierre-Olivier Amblard.
-#     Determinantal Point Processes for Coresets.
-#     arxiv.org/pdf/1803.08700.pdf
+# The following functions are not in the pyGSP toolbox, but are useful for the notebooks presented here. Some of these functions will eventually appear in the box. They have not been thoroughly tested (especially the SBM code may be unstable at some moments). Also, sorry for the only few comments. Treat with care. Nicolas. 
 
 import numpy as np
 from scipy import sparse
@@ -41,7 +22,7 @@ def ind2sub4up(IND):
 def create_SBM(N,q,c,epsi,com_size):
     """  A, truth = create_SBM(N,q,c,epsi,com_size)
     
-    creates an Stochastic Block Model (SBM) graph with specified parameters:
+    creates a Stochastic Block Model (SBM) graph with specified parameters:
         - N nodes, 
         - q communites of sizes listed in com_size, 
         - an average degree of c,
@@ -78,8 +59,6 @@ def create_SBM(N,q,c,epsi,com_size):
         truth[com_size[:k].sum():com_size[:k+1].sum()] = k
         
         Numedgesk = np.random.binomial(com_size[k]*(com_size[k]-1)/2, pin, size=None) #draw from a binomial the total number of edges within community
-    #    while Numedgesk > com_size[k]*(com_size[k]-1)/2:
-    #        Numedgesk = np.random.binomial(com_size[k]*(com_size[k]-1)/2, pin, size=None)
         
         edges = np.array(random.sample(range(int(com_size[k]*(com_size[k]-1)/2)), Numedgesk))+1
 
@@ -94,8 +73,6 @@ def create_SBM(N,q,c,epsi,com_size):
     for k in np.arange(q-1):
         Numedgesk = np.random.binomial(com_size[k]*(com_size[k+1:].sum()), pout, size=None)
         
-#        aux_edges = np.random.permutation(int(com_size[k]*(com_size[k+1:].sum())))
-#        edges = aux_edges[:Numedgesk]
         if Numedgesk != 0:
             edges = np.array(random.sample(range(int(com_size[k]*(com_size[k+1:].sum()))), Numedgesk))
         
@@ -185,21 +162,9 @@ def generate_concentric_circles(N_in, N_out, sigma_in, sigma_out, d=2):
     truth[N_out:]=1
     return data, truth
 
-def generate_concentric_circles_old(N_in, N_out, sigma_in, sigma_out):
-    '''
-    Create a simple data set made of two concentric distributions
-    data, truth = generate_concentric_circles(N_in, N_out, sigma_in, sigma_out)
-    '''
-    data = np.empty((N_in+N_out,2)) * np.nan
-    x = 2*np.random.rand(1,N_out)-1;
-    y = 2*np.random.rand(1,N_out)-1;
-    data[:N_out,0] = x / np.sqrt(x**2 + y**2) + sigma_out * np.random.randn(1,N_out)
-    data[:N_out,1] = y / np.sqrt(x**2 + y**2) + sigma_out * np.random.randn(1,N_out)
+def get_approx_filter(c):
+	filt_approx = lambda x: np.sum(np.tile(c[1:], (len(x), 1)) * np.cos(np.tile(np.arange(len(c)-1) + 1, (len(x), 1)) * np.transpose(np.tile(np.arccos(x), (len(c) - 1, 1)))), 1) + np.tile(c[0], (len(x), 1)).T * np.cos(0 * np.arccos(x)) / 2
+	return filt_approx
 
-    # second cluster
-    data[N_out:,0] = sigma_in * np.random.randn(1, N_in)
-    data[N_out:,1] = sigma_in * np.random.randn(1, N_in)
 
-    truth = np.zeros((N_in+N_out,))
-    truth[N_out:]=1
-    return data, truth
+
