@@ -43,29 +43,6 @@ The content is inspired by the following resources.
 [ntds_assignment]: https://nbviewer.jupyter.org/github/mdeff/ntds_2017/blob/outputs/assignments/04_solution.ipynb
 [pygsp_tutorials]: https://pygsp.readthedocs.io/en/stable/tutorials
 
-Notes:
-* representation of graphs and signals
-* some standard graph models (e.g. Erdos-Renyi, Barabasi-Albert)
-* graph construction (e.g. from point clouds)
-* graph operators: Laplacian and difference
-* smoothness of graph signals
-* graph Fourier basis: eigenvectors and spectrum
-* applications: spectral clustering, Laplacian eigenmap
-* graph Fourier transform
-* filtering by convolution in Fourier
-* some standard filters & filterbanks
-* fast filtering with polynomial approximations
-* application: denoising with low-pass filtering as the solution to an optimization problem (maybe EEG / fMRI data), curvature estimation with wavelets (point cloud / shape)
-* convex optimization on graph
-* application: semi-supervized learning with Thikonov / TV prior
-
-Optional / advanced:
-* deep learning on graphs, i.e. learning graph filters
-  * application: semantic segmentation of point clouds
-* spectrum estimation by filtering random signals
-  * application: spectral clustering, Laplacian eigenmap
-* stationarity
-
 ## Installation
 
 For a local installation, you will need [git], [Python >= 3.6][python], [Jupyter], and packages from the
