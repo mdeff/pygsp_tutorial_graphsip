@@ -8,8 +8,8 @@ Presented at the [graphSIP] summer school by [Michaël Defferrard](http://deff.c
 [pygsp]: https://github.com/epfl-lts2/pygsp
 [graphsip]: https://graphsip.sciencesconf.org
 
-We suggest you follow the [installation guide](#installation) to setup your own
-computer.
+We suggest you follow the [installation guide](#installation) to setup your own computer.
+If you don't succeed, you can work in the cloud using [binder][binder_lab].
 
 [binder_lab]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorial_graphsip/master?urlpath=lab
 [binder_notebook]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorial_graphsip/master?urlpath=tree
@@ -17,27 +17,31 @@ computer.
 ## Content
 
 The material covers the following topics:
-* representation of graphs and signals
-* some standard graph models (e.g. Erdos-Renyi, Barabasi-Albert)
-* graph construction (e.g. from point clouds)
-* graph operators: Laplacian and difference
-* smoothness of graph signals
-* graph Fourier basis: eigenvectors and spectrum
-* applications: spectral clustering, Laplacian eigenmap
-* graph Fourier transform
-* filtering by convolution in Fourier
-* some standard filters & filterbanks
-* fast filtering with polynomial approximations
-* application: denoising with low-pass filtering as the solution to an optimization problem (maybe EEG / fMRI data), curvature estimation with wavelets (point cloud / shape)
-* convex optimization on graph
-* application: semi-supervized learning with Thikonov / TV prior
+1. [Graphs: creation, models, properties, visualization][graphs]
+1. [Spectral Graph Theory: spectral clustering, Laplacian eigenmaps][spectral]
+1. [Graph signals: gradient, divergence, smoothness][signals]
+1. [Fourier: modes, transform][fourier]
+1. [Filters: filterbanks, filtering, approximations][filters]
+1. [Applications to point clouds: denoising and curvature estimation][point_clouds]
+1. [Applications to neuroscience: fMRI signals on brain connectome][neuroscience]
 
-Optional / advanced:
-* deep learning on graphs, i.e. learning graph filters
-  * application: semantic segmentation of point clouds
-* spectrum estimation by filtering random signals
-  * application: spectral clustering, Laplacian eigenmap
-* stationarity
+[graphs]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/01_graphs.ipynb
+[spectral]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/02_spectral.ipynb
+[signals]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/03_signals.ipynb
+[fourier]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/04_fourier.ipynb
+[filters]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/05_filters.ipynb
+[point_clouds]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/06_point_clouds.ipynb
+[neuroscience]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/07_neuroscience.ipynb
+
+The content is inspired by the following resources.
+
+* A [tutorial][ntds_tutorial] and an [assignment][ntds_assignment] from the course [A Network Tour of Data Science][ntds] taught at EPFL.
+* The [tutorials from the PyGSP documentation][pygsp_tutorials].
+
+[ntds]: https://github.com/mdeff/ntds_2017
+[ntds_tutorial]: https://nbviewer.jupyter.org/github/mdeff/ntds_2017/blob/outputs/demos/08_pygsp.ipynb
+[ntds_assignment]: https://nbviewer.jupyter.org/github/mdeff/ntds_2017/blob/outputs/assignments/04_solution.ipynb
+[pygsp_tutorials]: https://pygsp.readthedocs.io/en/stable/tutorials
 
 ## Installation
 
@@ -62,7 +66,7 @@ to install it and create an environment for the course.
    (you can also do this by launching Anaconda Navigator --> Environments --> Create)
 1. Activate the environment with `conda activate pygsp_tutorial_graphsip`
    (or `activate pygsp_tutorial_graphsip`, or `source activate pygsp_tutorial_graphsip`).
-1. Within this environment, run `conda install jupyter numpy scipy matplotlib pandas networkx` and `pip install pygsp`.
+1. Within this environment, run `conda install jupyter numpy scipy matplotlib networkx scikit-learn` and `pip install pygsp`.
 
 Every time you want to work, do the following:
 
