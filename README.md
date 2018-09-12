@@ -8,8 +8,8 @@ Presented at the [graphSIP] summer school by [Michaël Defferrard](http://deff.c
 [pygsp]: https://github.com/epfl-lts2/pygsp
 [graphsip]: https://graphsip.sciencesconf.org
 
-We suggest you follow the [installation guide](#installation) to setup your own
-computer.
+We suggest you follow the [installation guide](#installation) to setup your own computer.
+If you don't succeed, you can work in the cloud using [binder][binder_lab].
 
 [binder_lab]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorial_graphsip/master?urlpath=lab
 [binder_notebook]: https://mybinder.org/v2/gh/mdeff/pygsp_tutorial_graphsip/master?urlpath=tree
