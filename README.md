@@ -3,7 +3,8 @@
 [![Binder](https://mybinder.org/badge.svg)][binder_lab]
 &nbsp; (Jupyter [lab][binder_lab] or [notebook][binder_notebook])
 
-Presented at the [graphSIP] summer school by [Michaël Defferrard](http://deff.ch) and [Nicolas Tremblay](http://www.gipsa-lab.fr/~nicolas.tremblay).
+Presented at the [GraphSiP] summer school by [Michaël Defferrard](http://deff.ch) and [Nicolas Tremblay](http://www.gipsa-lab.fr/~nicolas.tremblay).
+GraphSiP is about Graph Signal Processing with Applications to 3D Clouds of Points and Neuroscience.
 
 [pygsp]: https://github.com/epfl-lts2/pygsp
 [graphsip]: https://graphsip.sciencesconf.org
