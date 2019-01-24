@@ -34,7 +34,7 @@ The material covers the following topics:
 [point_clouds]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/06_point_clouds.ipynb
 [neuroscience]: https://nbviewer.jupyter.org/github/mdeff/pygsp_tutorial_graphsip/blob/outputs/notebooks/07_neuroscience.ipynb
 
-The content is inspired by the following resources.
+The content is inspired by the following resources:
 
 * A [tutorial][ntds_tutorial] and an [assignment][ntds_assignment] from the course [A Network Tour of Data Science][ntds] taught at EPFL.
 * The [tutorials from the PyGSP documentation][pygsp_tutorials].
